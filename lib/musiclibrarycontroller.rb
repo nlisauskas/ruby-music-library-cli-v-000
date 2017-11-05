@@ -115,6 +115,11 @@ end
 
     song_list = Song.all.sort_by{|song| song.name}
 
+    if (1...song_list.length).include?(input)
+         puts "Playing #{song_list[input-1].name} by #{song_list[input-1].artist.name}"
+     end
+   end
+
   end
 
 
