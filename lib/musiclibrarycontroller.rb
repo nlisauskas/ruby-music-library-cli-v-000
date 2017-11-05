@@ -64,6 +64,10 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artist = Artist.find_by_name(gets)
 
+    if artist == nil
+      nil
+    else
+
     song_list = artist.songs.sort_by {|song| song.name}
     i = 0
     while i < song_list.length
@@ -72,6 +76,7 @@ class MusicLibraryController
       i +=1
     end
   end
+end
   end
 
   def list_genres
