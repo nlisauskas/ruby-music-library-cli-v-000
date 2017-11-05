@@ -66,9 +66,11 @@ class MusicLibraryController
 
     song_list = Song.all.sort_by {|song| song.name}
     i = 0
-    while i < song_list.length && song.artist.name == input
+    while i < song_list.length
     song_list.each do |song|
+      if song.artist.name == input
       puts "#{i + 1}. #{song.name} - #{song.genre.name}"
+    end
       i +=1
     end
   end
