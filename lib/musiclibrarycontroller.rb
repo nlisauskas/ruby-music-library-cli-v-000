@@ -50,6 +50,14 @@ class MusicLibraryController
   end
 
   def list_artists
+    artist_list = Artist.all.sort_by {|artist| artist.name}
+    i = 0
+    while i < artist_list.length
+    artist_list.each do |song|
+      puts "#{i + 1}. #{artist.name}"
+      i +=1
+    end
+  end
   end
 
   def list_songs_by_artist
