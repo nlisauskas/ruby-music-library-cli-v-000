@@ -53,7 +53,7 @@ class MusicLibraryController
     artist_list = Artist.all.sort_by {|artist| artist.name}
     i = 0
     while i < artist_list.length
-    artist_list.each do |song|
+    artist_list.each do |artist|
       puts "#{i + 1}. #{artist.name}"
       i +=1
     end
