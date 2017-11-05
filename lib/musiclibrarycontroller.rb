@@ -64,11 +64,11 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets
 
-    song_list = if Song.artist == input then Song.all.sort_by {|song| song.name} end
+    song_list = Song.all.sort_by {|song| song.name}
     i = 0
-    while i < song_list.length
+    while i < song_list.length && song.artist.name == input
     song_list.each do |song|
-      puts "#{i + 1}. #{song.name} - #{song.genre.name}"
+      puts "#{i + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       i +=1
     end
   end
