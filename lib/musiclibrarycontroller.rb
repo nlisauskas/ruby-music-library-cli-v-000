@@ -41,7 +41,7 @@ class MusicLibraryController
   def list_songs
     i = 0
     while i < Song.all.length
-    Song.all each do |song|
+    Song.all.each do |song|
       puts "#{i + 1}. #{song}"
       i +=1
     end
