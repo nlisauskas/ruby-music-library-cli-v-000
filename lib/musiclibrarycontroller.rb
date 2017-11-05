@@ -91,6 +91,22 @@ end
   end
 
   def list_songs_by_genre
+    puts "Please enter the name of an genre:"
+    genre = Genre.find_by_name(gets)
+
+    if genre == nil
+      nil
+    else
+
+    song_list = genre.songs.sort_by {|song| song.name}
+    i = 0
+    while i < song_list.length
+    song_list.each do |song|
+      puts "#{i + 1}. #{song.name} - #{song.artist.name}"
+      i +=1
+    end
+  end
+end
   end
 
   def play_song
