@@ -69,7 +69,9 @@ class MusicLibraryController
     while i < song_list.length
     song_list.each do |song|
       if song.artist.name == input
-      puts "#{i + 1}. #{song.name} - #{song.genre.name}"
+        x = 0
+      puts "#{x + 1}. #{song.name} - #{song.genre.name}"
+      x +=1
     end
       i +=1
     end
