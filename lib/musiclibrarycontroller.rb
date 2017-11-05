@@ -113,7 +113,7 @@ end
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
 
-    song_list = Song.all.sort_by {|song| song.name}
+    song_list = Song.all.sort_by{|song| song.name}
 
   end
 
