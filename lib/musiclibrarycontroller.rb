@@ -102,7 +102,7 @@ end
     i = 0
     while i < song_list.length
     song_list.each do |song|
-      puts "#{i + 1}. #{song.name} - #{song.artist.name}"
+      puts "#{i + 1}. #{song.artist.name} - #{song.name}"
       i +=1
     end
   end
