@@ -39,6 +39,7 @@ class MusicLibraryController
   end
 
   def list_songs
+    song_list = Song.all.sort_by {|song| song.name}
     i = 0
     while i < Song.all.length
     Song.all.each do |song|
